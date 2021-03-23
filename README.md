@@ -11,7 +11,6 @@
 
 ### Solution 1 | Generate the project with the Github template feature
 
-Click on the button [_Use this template_](https://github.com/mc100s/mern-hooks-boilerplate/generate) on this page and create a new GitHub repository.
 
 Then you can clone the project and add a `server/.env` file, with for example the following values:
 
