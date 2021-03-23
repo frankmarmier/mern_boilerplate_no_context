@@ -6,6 +6,7 @@ const cors = require("cors");
 const express = require("express");
 const mongoose = require("mongoose");
 const logger = require("morgan");
+// const multer = require("multer")
 
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
@@ -19,6 +20,7 @@ app.use(
     credentials: true, // Accept cookies from different domain
   })
 );
+
 
 app.use(logger("dev"));
 app.use(express.json());
@@ -36,6 +38,8 @@ app.use(
 
 app.use("/api", require("./routes/auth"));
 app.use("/api/countries", require("./routes/countries"));
+// app.use("/api", require("./routes/index"));
+app.use("/api/street-arts", require("./routes/street-arts"));
 
 // For any routes that starts with "/api", catch 404 and forward to error handler
 app.use("/api/*", (req, res, next) => {
