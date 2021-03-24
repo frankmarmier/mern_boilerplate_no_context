@@ -30,7 +30,6 @@ router.post("/", uploader.single("picture"), (req, res, next) => {
 
   console.log(req.body);
 
-
   const newStreetArt = {
     location: {coordinates : [lat, lng]},
     pictureUrl: pictureUrl
