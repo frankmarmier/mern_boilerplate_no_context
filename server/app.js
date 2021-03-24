@@ -21,7 +21,6 @@ app.use(
   })
 );
 
-
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -37,6 +36,7 @@ app.use(
 );
 
 app.use("/api", require("./routes/auth"));
+app.use("/api", require("./routes/visits"));
 app.use("/api/countries", require("./routes/countries"));
 // app.use("/api", require("./routes/index"));
 app.use("/api/street-arts", require("./routes/street-arts"));
